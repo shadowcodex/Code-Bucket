@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Code Bucket | Main</title>
+    <link rel="styleshee"  type="text/css" href="styles/reset.css">
+    <link rel="stylesheet" type="text/css" href="styles/main.css"> 
+</head>
+<body>
+<div id="info">
+    <div id="header1">
+        &nbsp&nbsp&nbsp&nbspCode Bucket - Main
+    </div>
+    <div id="header2">
+        <form>
+            Select Your Language: &nbsp
+            <input id="sql" type="radio" name="syntax" value="sql" onClick="setSyntax('sql')">SQL
+            <input id="c_cpp" type="radio" name="syntax" value="c_cpp" onClick="setSyntax('c_cpp')">C++
+            <input id="java" type="radio" name="syntax" value="java" onClick="setSyntax('java')">Java
+        </form> 
+    </div>
+    <div id="header3">
+        <form>
+            Set Password?: &nbsp <input id="setPassword" type="password" name="password">
+        </form>
+    </div>
+    <a id="savePassword" href="#">
+        <div id="header4">
+            Set!
+        </div>
+    </a>
+    <div class="clearfix"></div>
+</div>
+<div class="hotkeys">
+    <img 
+        src="images/F10.png" 
+        class="keyboard" 
+        onClick="toggleTheme()"
+    /><span class="tooltip">Toggle Theme</span><br /> 
+    <img 
+        src="images/F11.png" 
+        class="keyboard" 
+        onClick="makeFullScreen()"
+    /><span class="tooltip">FullScreen</span><br />
+    <img 
+        src="images/F12.png" 
+        class="keyboard" 
+        onClick="saveFile()"
+    /><span class="tooltip">Save File</span><br />
+
+</div>
+<div class="main">
+    <div class="tab">Filename.extension</div>
+    <div class="editor_border">
+        <div id="editor"></div>
+    </div>
+</div>
+<br />
+
+
+<script src="src/jquery.js" type="text/javascript" charset="utf-8"></script>
+<script src="./src/ace.js" type="text/javascript" charset="utf-8"></script>
+<script src="src/app.js" type="text/javascript" charset="utf-8"></script>
+
+
+</body>
+</html>
