@@ -2,11 +2,13 @@
 // Lets setup some variables
 var $ = document.getElementById.bind(document);
 var savePassword = document.getElementById("savePassword");
+var password = "";
+var author = "";
+var title = "";
 var dom = require("ace/lib/dom");
 var filename = null;
-var extension = null;
+var exten = "";
 var toggle = 0;
-var syntax = "";
 
 // Create the editor
 var editor = ace.edit("editor");
@@ -28,10 +30,10 @@ if(filename != "") {
     editor.setValue("");
     document.getElementById('sql').checked = true;
     filename = Math.floor(Math.random()*999999);
-    extension = ".code"
+    exten = ".sql";
 }
-document.getElementById("filename").innerHTML = filename + extension;
-document.getElementById("link").innerHTML = '<a href="http://localhost/?' + filename + '"> http://localhost/?' + filename + '</a>'
+document.getElementById("filename").innerHTML = filename + exten;
+document.getElementById("link").innerHTML = '<a href="http://localhost/?' + filename + '"> http://localhost/?' + filename + '</a>';
 
 
 
@@ -43,7 +45,11 @@ saveFile = function() {
         url: "./saves/save.php",
         data: {
             contents: contents,
-            filename: filename
+            filename: filename,
+            extension: exten,
+            author: author,
+            title: title,
+            key: password
         },
         success: function(msg) {
             alert("Saved file:" + filename);
@@ -73,12 +79,13 @@ toggleTheme = function() {
 
 
 setSyntax = function(extension) {
-    syntax = extension;
+    exten = extension;
     editor.getSession().setMode("ace/mode/" + extension);
+    document.getElementById("filename").innerHTML = filename + "." + exten;
 };
 
 savePassword.onclick = function() {
-    password = document.getElementById("setPassword").value;
+    password = SHA256(document.getElementById("setPassword").value);
     alert("Password Saved!");
     return false;
 }
