@@ -4,6 +4,7 @@ var $ = document.getElementById.bind(document);
 var savePassword = document.getElementById("savePassword");
 var dom = require("ace/lib/dom");
 var filename = null;
+var extension = null;
 var toggle = 0;
 var syntax = "";
 
@@ -16,14 +17,27 @@ editor.getSession().setMode("ace/mode/sql");
 editor.focus();
 
 // Lets open a file if there is a parameter
-editor.setValue("");
-document.getElementById('sql').checked = true;
+filename = window.location.search.replace( "?", "" );
+
+
+if(filename != "") {
+    //pull information from database...
+    //check for password
+    //load it!
+} else {
+    editor.setValue("");
+    document.getElementById('sql').checked = true;
+    filename = Math.floor(Math.random()*999999);
+    extension = ".code"
+}
+document.getElementById("filename").innerHTML = filename + extension;
+document.getElementById("link").innerHTML = '<a href="http://localhost/?' + filename + '"> http://localhost/?' + filename + '</a>'
+
+
 
 // Lest save a file
 saveFile = function() {
     var contents = editor.getSession().getValue();
-    filename = Math.floor(Math.random()*99999999999);
-    var urlStr = '<%: Url.Content( "save.php" ) %>';
     jQuery.ajax({
         type: "POST",
         url: "./saves/save.php",
