@@ -3,9 +3,9 @@ Todo:
 
 
  * Create an sqlite3 database to store basic information about each file.
- * Create the method to read information passed by URL.
+ * [done] Create the method to read information passed by URL.
  * Create the method to read a saved file.
- * Create the method to set a password.
+ * [done] Create the method to set a password.
  * Create the method to read a files information from the database.
  * Rebuild UI with Flat UI: https://github.com/iurevych/Flat-UI
 
