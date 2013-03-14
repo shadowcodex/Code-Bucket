@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Code Bucket | Main</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link href="css/font-awesome.min.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" type="text/css" href="styles/recss.css">
+
+
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type='text/javascript'>
+        $(document).ready(function () {
+            if ($("[rel=tooltip]").length) {
+            $("[rel=tooltip]").tooltip();
+         }
+        });
+    </script>
+
+</head>
+<body>
+<div id="info">
+    <div class="navbar">
+        <div class="navbar-inner">
+            <a class="brand" href="#">Code Bucket</a>  
+            <ul class="nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Help <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">All Keybindings</a></li>
+                        <li><a href="#" onClick="toggleTheme()"/>F10 - Toggle Theme</a></li>
+                    </ul>
+                </li>
+                <li class="divider-vertical"></li>
+                <li><span class="navbar-text">Select Your Language</span></li>
+            </ul>
+            
+            <form class="navbar-form pull-left">                
+                <select>
+                    <option id="sql" onClick="setSyntax('sql')">SQL</option>
+                    <option id="c_cpp" onClick="setSyntax('c_cpp')">C/C++</option>
+                    <option id="java" onClick="setSyntax('java')">Java</option>
+                </select>
+            </form>
+            
+            <ul class="nav pull-right">
+                <li class="divider-vertical"></li>
+                <li><a rel="tooltip" data-placement="bottom" href="http://twitter.github.com/bootstrap/" title="A CSS framework that lets you rapidly build websites">Built With Bootstrap <i class="icon-share-alt"></i></a></li>
+                <li class="divider-vertical"></li>
+                <li><a rel="tooltip" data-placement="bottom" href="https://github.com/vanillaconcepts" title="Visit our github page!"><i class="icon-github icon-large"></i></a></li>
+            </ul>
+            <form class="navbar-form pull-right">
+                <button id="savePassword" class="btn">Set Password!</button>
+                <input id="setPassword" type="password" name="password" class="span3">
+            </form>
+        </div>
+    </div>
+    <div id="header1">
+        &nbsp&nbsp&nbsp&nbspCode Bucket - Main
+    </div>
+    <div id="header2">
+        <form>
+
+        </form> 
+    </div>
+    <div id="header3">
+        <form>
+            Set Password?: &nbsp <input id="setPassword" type="password" name="password">
+        </form>
+    </div>
+    <a id="savePassword" href="#">
+        <div id="header4">
+            Set!
+        </div>
+    </a>
+    <div class="clearfix"></div>
+</div>
+<div class="hotkeys">
+    
+    <span class="tooltip">Toggle Theme</span><br /> 
+    <img 
+        src="img/F11.png" 
+        class="keyboard" 
+        onClick="makeFullScreen()"
+    /><span class="tooltip">FullScreen</span><br />
+    <img 
+        src="img/F12.png" 
+        class="keyboard" 
+        onClick="saveFile()"
+    /><span class="tooltip">Save File</span><br />
+
+</div>
+<div class="main">
+    <div id="filename" class="tab"></div>
+    <div class="editor_border">
+        <div id="editor"></div>
+        <div id="link"></div>
+    </div>
+</div>
+<br />
+
+    <script src="src/sha256.js" type="text/javascript" charset="utf-8"></script>
+    <script src="./src/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script src="src/app.js" type="text/javascript" charset="utf-8"></script>
+
+
+
+
+</body>
+</html>
