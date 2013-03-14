@@ -1,11 +1,19 @@
+body, html {
+    height:100%;
+    background-image:url('../img/tileable_wood_texture.png');
+    background-repeat: repeat;
+}
+
+.center { float: none; margin-left: auto; margin-right: auto; }
+
+
 .ace_editor {
     border: 1px solid lightgray;
-    position: absolute;
     margin-left:auto;
     margin-right:auto;
     height:500px;;
-    width:800px;
-    z-index:3;
+    width:100%;
+    z-index:1;
 }
 
 .ace_editor.fullScreen {

@@ -1,4 +1,12 @@
 
+// Set jQuery to no conflict mode
+jQuery.noConflict();
+
+
+// Setup Tooltips
+
+
+
 // Lets setup some variables
 var $ = document.getElementById.bind(document);
 var savePassword = document.getElementById("savePassword");
@@ -118,3 +126,5 @@ editor.commands.addCommand({
         toggleTheme();
     }
 });
+
+
