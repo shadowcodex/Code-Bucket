@@ -5,9 +5,9 @@
 	$extension = $_POST['extension'];
 	$content = $_POST['contents'];
 	$date = date('Y-m-d H:i:s'); // get time stamp
-	if($_POST['author'] != "") {$author = $_POST['author'];} else {$author = ""};
-	if($_POST['title'] != "") {$title = $_POST['title'];} else {$title = ""};
-	if($_POST['key'] != "") {$key = $_POST['key'];} else {$key = ""};
+	if($_POST['author'] != "") {$author = $_POST['author'];} else {$author = "";}
+	if($_POST['title'] != "") {$title = $_POST['title'];} else {$title = "";}
+	if($_POST['key'] != "") {$key = $_POST['key'];} else {$key = "";}
 
 	// Sanatize the results;
 	
