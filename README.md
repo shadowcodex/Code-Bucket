@@ -6,9 +6,9 @@ A javascript pastebin leveraging the ace editor.
 Contact
 -------
 
-Twitter: @codetheuniverse
-Email: jsduncan98@gmail.com
-Website: codetheuniverse.com
+Twitter: @paperlesscreate
+Email: contact@paperlesscreations.com
+Website: paperlesscreations.com
 Skype: shadow.codex
 
 Setting Up Code Bucket
@@ -16,6 +16,7 @@ Setting Up Code Bucket
 
 Just browse to the install.php file and it will setup the necessary database and configuration. 
 
+Delete the install.php file afterwards.
 
 Using Code Bucket
 -----------------
