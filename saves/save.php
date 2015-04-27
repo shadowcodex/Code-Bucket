@@ -7,8 +7,16 @@
 	$date = date('Y-m-d H:i:s'); // get time stamp
 	if($_POST['author'] != "") {$author = $_POST['author'];} else {$author = ""};
 	if($_POST['title'] != "") {$title = $_POST['title'];} else {$title = ""};
-	if($_POST['key'] != "") {$password = $_POST['key'];} else {$key = ""};
+	if($_POST['key'] != "") {$key = $_POST['key'];} else {$key = ""};
 
+	// Sanatize the results;
+	
+	$filename = sqlite_escape_string($filename);
+	$extension = sqlite_escape_string($extension);
+	$author = sqlite_escape_string($author);
+	$title = sqlite_escape_string($title);
+	$key = sqlite_escape_string($key);
+	
 	// Setup database connection
 	$dbname='base';
 	$mytable ="file_store";
