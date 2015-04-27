@@ -7,8 +7,11 @@ Contact
 -------
 
 Twitter: @paperlesscreate
+
 Email: contact@paperlesscreations.com
+
 Website: paperlesscreations.com
+
 Skype: shadow.codex
 
 Setting Up Code Bucket
