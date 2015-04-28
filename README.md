@@ -3,6 +3,10 @@ code-bucket
 
 A javascript pastebin leveraging the ace editor.
 
+Still under heavy development. Use at your own risk!!! (No bug support right now, as there are too many to count while developing)
+
+* Oh and at the moment there are lots of security holes as well. To be fixed.
+
 Contact
 -------
 
