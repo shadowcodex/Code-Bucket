@@ -18,11 +18,11 @@
     </script>
     
     <script type="text/javascript">
-    	createCode = function(){
+    	function createCode(){
     		window.location = "code.html";
     	}
     	
-    	openCode = function(){
+    	function openCode(){
     		window.location = "code.html" + "?" + document.getElementById("filename").value;
     	}
     </script>
@@ -37,7 +37,7 @@
 		<div class="row">
 			<div class="alert alert-success span12">
 			    <button type="button" class="close" data-dismiss="alert">&times;</button>
-			    <strong>Warning!</strong> This system is currently under development. Contact Shannon @ 2050
+			    <strong>Warning!</strong> This system is currently under development. No promises are made.
 		    </div>
 		</div>
 		
@@ -47,7 +47,7 @@
 			        <legend class="">Welcome!</legend>
 			      </div>    
 				  Create new code! &nbsp;&nbsp; <button onClick="createCode()" class="btn btn-success pull-right">Create</button><br /><br />
-				  OR open a code! &nbsp;&nbsp; <input  type="text" id="filename" value="File#" name="password" placeholder="" class="input-xlarge pull-right"><br /><br />
+				  OR open a code! &nbsp;&nbsp; <input  type="text" id="filename" name="password" placeholder="File#" class="input-xlarge pull-right"><br /><br />
 			      <button onClick="openCode()" class="btn btn-success pull-right">Open</button>
 			     
 			   

@@ -3,7 +3,7 @@
 	$filename = $_POST['filename'];
 
 	// Setup database connection
-	$dbname='../base';
+	$dbname='../cb1856.db';
 	$mytable ="file_store";
 	$base=new SQLite3($dbname);
 

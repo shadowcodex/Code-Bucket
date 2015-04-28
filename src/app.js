@@ -30,7 +30,7 @@ function saveFile() {
 	var contents = editor.getSession().getValue();
     jQuery.ajax({
         type: "POST",
-        url: "./saves/save.php",
+        url: "saves/save.php",
         data: {
             contents: contents,
             filename: filename,
@@ -104,7 +104,7 @@ function getFile(){
 function getPassword(){
 	jQuery.ajax({
         type: "POST",
-        url: "./saves/password.php",
+        url: "saves/password.php",
         data: {
             filename: filename
         },
@@ -113,7 +113,7 @@ function getPassword(){
             if(data.error == false) {
             	password2 = data.key;
             	fileExists = true;
-            	alert("yo");
+            	//alert("yo");
             } else {
             	password2 = 0;
             	alert("Failed Opening File!");
@@ -181,11 +181,11 @@ if(filename != "") {
 				window.location = "index.html";
 			}
 		} else if(fileExists == true){
-			alert("made it!");
+			//alert("made it!");
 			getFile();		
 		} else {
 			alert("File Doesn't Exist, or Error Happend!");
-			//window.location = "index.html";
+			window.location = "index.html";
 		}
     }, 500);
 } else {

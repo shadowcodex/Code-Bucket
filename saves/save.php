@@ -11,7 +11,7 @@
 	if(isset($_POST['key'])) {$key = $_POST['key'];} else {$key = "";}
 
 	// Setup database connection
-	$dbname='../base';
+	$dbname='../cb1856.db';
 	$mytable ="file_store";
 	$base=new SQLite3($dbname);
 
