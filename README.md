@@ -1,3 +1,8 @@
+# Warning
+
+Don't use this if you value data haha, I wrote this when I was still new to javascript and securing data. Lots of holes and bugs, and should be only used as a viewpoint of my progression in coding design.
+
+
 code-bucket
 ===========
 
